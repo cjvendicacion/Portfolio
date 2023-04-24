@@ -1,0 +1,348 @@
+@import url('https://fonts.cdnfonts.com/css/velekom');
+@import url('https://fonts.cdnfonts.com/css/choko');
+@import url('https://fonts.cdnfonts.com/css/dubstep-dungeons');
+
+/** body **/
+
+html, body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #245953;
+    margin: 0;
+    padding: 0;
+}
+
+/** card panel **/
+
+.card{ 
+    flex-basis: 50%;
+    border-radius: 2.5vw;
+    background: linear-gradient(135deg, rgba(251, 233, 233, 0.1), rgba(153, 153, 153, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 1vw;
+}
+.item{
+    border-radius: 1.5vw;
+    background: linear-gradient(135deg, rgba(251, 233, 233, 0.1), rgba(153, 153, 153, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    text-align: center;
+    padding: 1vw;
+    font-family: 'Velekom';
+    color: white;
+}
+.item-title{
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 10px yellow;
+}
+.item p{
+    font-size: 0.75rem;
+}
+.item img{
+    width: 5vw;
+    min-width: 50px;
+    height: auto;
+    margin: 1vw;
+}
+.item a img{
+    width: 5vw;
+    min-width: 50px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 247, 0, 0.16);
+}
+.set{
+    border-radius: 1.5vw;
+    background: linear-gradient(135deg, rgba(251, 233, 233, 0.1), rgba(153, 153, 153, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    text-align: center;
+    padding: 1vw;
+    font-family: 'Velekom';
+    color: white;
+    margin-top: 1vw;
+    height: fit-content;
+}
+.set-items{
+    display: inline-block;
+    margin: 1vw;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 1vw;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.36);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5vw;
+}
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1vw;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+}
+.container-type2{
+    margin: 2vw;
+}
+@media (max-width: 767px) {
+    .item-container, .nav-box .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+}
+  
+.image-container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.image-container img{
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    max-height: 220px;
+}
+
+#root-container {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+.focus-text{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Dubstep Dungeons';
+    font-size: 1.8rem;
+    padding: 1vw;
+}
+
+/** section **/
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.page-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+    }
+}
+.page-section .container{
+    margin: 2.5vw;
+}
+
+/** home section **/
+
+#section-1{
+    /**background-color: #245953;**/
+    background-image: url('https://rare-gallery.com/mocahbig/81250-polygon-abstract-hd-4k-5k-artist-artwork-digital.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: 'Velekom';
+}
+#section-1 div h1{
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 0 20px #D8D8D8;
+}
+#section-1 div h2{
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 20px #E49393;
+}
+#section-1 div h3{
+    font-size: 1rem;
+    color: gray;
+}
+/** about section **/
+
+#section-2{
+    background-image: url('https://rare-gallery.com/mocahbig/81250-polygon-abstract-hd-4k-5k-artist-artwork-digital.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.text h1{
+    font-family: 'Dubstep Dungeons';
+    color: white;
+    text-shadow: 0 0 6px yellow;
+    font-size: 1.5rem;
+}
+.text p{
+    font-size: 1rem;
+}
+.text {
+    flex-basis: 50%;
+    font-family: 'Dubstep Dungeons';
+    color: white;
+    text-shadow: 0 0 8px yellow;
+    margin: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text, .card {
+        flex-basis: 100%;
+    }
+}
+/** contact section **/
+
+#section-3{
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/03/Neon-Backgrounds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/** developer career section **/
+
+#section-4{
+    background-color: #D8D8D8;
+}
+
+/** remarks section **/
+
+#section-5{
+    background-color: #245953;
+}
+
+/** draggable element **/
+
+.draggable-element{
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 25px;
+    min-height: 25px;
+    text-align: center;
+    border-radius: 25rem;
+    background-color: gray;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    opacity: 25%;
+    display: flex;
+    flex-direction: column;
+
+    /* important attributes */ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: move;
+    touch-action: none;
+    z-index: 9999;
+}
+
+.draggable-element img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.draggable-element:hover{
+    background-color: white;
+    box-shadow: 0 0 25px yellow;
+    opacity: 60%;
+}
+
+.nav-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    display: none;
+    width: 25vw;
+    height: fit-content;
+    background: linear-gradient(135deg, rgba(251, 233, 233, 0.1), rgba(153, 153, 153, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    min-width: 300px;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.nav-box .item:hover{
+    border: solid rgba(255, 255, 255, 0.16);
+    border-width: 1px 0.75vw 1px 0.75vw;
+    border-color: rgba(255, 255, 255, 0.16) yellow rgba(255, 255, 255, 0.16) yellow;
+}
+  
+.nav-box .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1vw;
+}
+.nav-box div{
+    margin: 1vw;
+}
+.item-title a, .item a{
+    color: white;
+    text-decoration: none;
+}
+/** design items **/
+
+/** slide effect **/
+.animate-slide {
+    opacity: 0;
+    transform: translateY(-150px);
+    transition: opacity 1.2s ease-out, transform 0.3s ease-out;
+}
+
+.animate-slide.active {
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.animate-slide-1 {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 1.2s ease-out, transform 0.3s ease-out;
+}
+
+.animate-slide-1.active {
+    opacity: 100;
+    transform: translateX(0);
+}
+
+.animate-slide-2 {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 1.2s ease-out, transform 0.3s ease-out;
+}
+
+.animate-slide-2.active {
+    opacity: 100;
+    transform: translateX(0);
+}
