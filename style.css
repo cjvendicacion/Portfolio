@@ -6,9 +6,12 @@
 
 html, body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #245953;
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2015/09/02/repeat-patterns.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
 
 /** card panel **/
@@ -95,10 +98,21 @@ html, body{
 .container-type2{
     margin: 2vw;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .container, .info-container {
+        flex-direction: column;
+    }
+    .info-container{
+        margin: 1vw;
+        padding: 1vw;
+        align-items: center;
+    }
     .item-container, .nav-box .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
+    }
+    .text, .card {
+        flex-basis: 100%;
     }
 }
   
@@ -126,6 +140,41 @@ html, body{
     font-family: 'Dubstep Dungeons';
     font-size: 1.8rem;
     padding: 1vw;
+}
+.info-container img{
+    width: 15vw;
+    background-color: white;
+    min-width: 100px;
+    border-radius: 1vw; 
+}
+.info-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5vw 5vw 0 5vw;
+    padding: 1.5vw;
+    color: white;
+    font-family: 'Velekom';
+    text-shadow: 0 0 4px yellow;
+
+    border: solid rgba(255, 255, 255, 0.16);
+    border-width: 1px 1px 1px 0.75vw;
+    border-color: rgba(255, 255, 255, 0.16) rgba(255, 255, 255, 0.16) rgba(255, 255, 255, 0.16) yellow;
+    border-radius: 1.5vw;
+
+    background: linear-gradient(135deg, rgba(251, 233, 233, 0.1), rgba(153, 153, 153, 0.1));
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+
+    transition: margin 0.2s ease-in-out;
+}
+.info-container:hover{
+    margin: 1.5vw 0 0 10vw;
+}
+.info-container div{
+    margin-left: 1.5vw;
 }
 
 /** section **/
@@ -157,11 +206,6 @@ section{
 /** home section **/
 
 #section-1{
-    /**background-color: #245953;**/
-    background-image: url('https://rare-gallery.com/mocahbig/81250-polygon-abstract-hd-4k-5k-artist-artwork-digital.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
     font-family: 'Velekom';
 }
 #section-1 div h1{
@@ -181,10 +225,6 @@ section{
 /** about section **/
 
 #section-2{
-    background-image: url('https://rare-gallery.com/mocahbig/81250-polygon-abstract-hd-4k-5k-artist-artwork-digital.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -205,37 +245,16 @@ section{
     text-shadow: 0 0 8px yellow;
     margin: 1vw;
 }
-
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .text, .card {
-        flex-basis: 100%;
-    }
+.start-text{
+    text-align: center;
+    width: 100%;
 }
 /** contact section **/
 
 #section-3{
-    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/03/Neon-Backgrounds.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-}
-/** developer career section **/
-
-#section-4{
-    background-color: #D8D8D8;
-}
-
-/** remarks section **/
-
-#section-5{
-    background-color: #245953;
 }
 
 /** draggable element **/
